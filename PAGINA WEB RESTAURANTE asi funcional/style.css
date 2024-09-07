@@ -1,0 +1,303 @@
+/* Reseteo de márgenes y paddings para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilos generales */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f4f0;
+    line-height: 1.6;
+}
+
+/* Ajustes para imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Encabezado */
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(imagenes/ejemplo.png) no-repeat center center/cover;
+    min-height: 70vh;
+    padding: 50px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.menu-icono {
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* Sección de información */
+.information {
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.information-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.information-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.information-c1, .information-c2 {
+    flex: 1;
+    margin: 10px;
+}
+
+.information-a1, .information-a2 {
+    flex: 1;
+    margin: 10px;
+}
+
+.information img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sección de ofertas */
+.oferts {
+    padding: 50px 20px;
+    background: #f8f8f8;
+}
+
+.ofert-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ofert-1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.bfert-txt, .ofert-img {
+    flex: 1;
+    margin: 10px;
+}
+
+.ofert-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botones */
+.btn-1, .btn-2 {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #ff5722;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-1:hover, .btn-2:hover {
+    background: #e64a19;
+}
+
+/* Sección de comida */
+.food {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.food h2 {
+    font-size: 2rem;
+}
+
+.food span {
+    display: block;
+    margin: 10px 0;
+}
+
+.food a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #ff5722;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.food a:hover {
+    background: #e64a19;
+}
+
+/* Pie de página */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.footer-sec {
+    text-align: center;
+}
+
+.footer-sec h2 {
+    font-size: 1.5rem;
+}
+
+.footer-sec p {
+    margin: 20px 0;
+}
+
+.content-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.link {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.link h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.link p {
+    margin: 5px 0;
+}
+
+.whatsapp-link {
+    color: #25d366;
+    font-size: 2rem;
+}
+
+.whatsapp-link:hover {
+    color: #128C7E;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-content {
+        text-align: center;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-icono {
+        display: block;
+    }
+
+    .menu input[type="checkbox"]:checked ~ .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #333;
+        padding: 10px;
+        width: calc(100% - 40px);
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .information-content {
+        flex-direction: column;
+    }
+
+    .ofert-content {
+        flex-direction: column;
+    }
+    
+    .information-1 {
+        flex-direction: column;
+    }
+
+    .information-c1, .information-c2, .information-a1, .information-a2 {
+        margin: 10px 0;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .link {
+        margin: 20px 0;
+    }
+}
